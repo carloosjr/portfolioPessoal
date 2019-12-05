@@ -1,0 +1,316 @@
+                                    /* Estilização do documento */ 
+
+html, body{
+    /* Resetando os espaçamentos e tamanho da fonte */
+    margin: 0px;
+    padding: 0px;
+    /*font-size: 0px;*/
+}
+
+/*Estilizando o body do documento */
+body{
+    background-color: #2b2b2b;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Estilizando o menu do documento */
+.menu ul{
+    margin-top: 0px; /* Subindo a lista para colar na janela do navegador */
+    list-style: none; /* Tirando o estilo da lista não ordenada */
+    padding-left: 0px; /* Colando a lista no lado esquerdo */
+    text-align: right; 
+    height: 50px;
+}
+
+.menu li{
+    display: inline-block; /* Colando os itens da lista um ao lado do outro */
+    padding-left: 30px; /* Fazendo o espaçamento dos itens */
+    padding-right: 30px; /* Fazendo o espaçamento dos itens */
+    line-height: 50px; /* Centralizando a palavra do menu */
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.menu{
+    background-color: #2b2b2b;
+    color: white;
+    height: 50px; /* Espessura do menu */
+    /* Inserindo a animação vinda do Keyframes*/
+    animation-name: menu;
+    animation-duration: 4s;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Colocando a "animação" */
+.menu a:hover{   
+    color: #0FA3B1;
+}
+
+.menu li.menu-icon{
+    display: none;
+}
+
+.menu li.menu-icon:hover{
+    color: #0FA3B1;
+    cursor: pointer;
+}
+
+/*Estilizando a cor da fonte dentro da div com a classe perfil */
+.perfil{
+    color: white;
+}
+
+/*Estilizando a cor da fonte dentro do span na classe perfil */
+.perfil span{
+    color: #0FA3B1;
+    display: block;
+}
+
+.perfil div{
+    display: inline-block; /* Colocando as divs dentro da div Perfil uma do lado da outra */
+    height: 650px;
+}
+
+.profile-photo img{
+    width: 320px;
+    border-radius: 320px; /* Arredondando a imagem */
+    margin-top: 100px; /* Distanciando a imagem */
+}
+
+.profile-photo{
+    text-align: center;
+    width: 40%;
+    /* Inserindo a animação vinda do Keyframes*/
+    animation-name: photo-home;
+    animation-duration: 5s;
+}
+
+.profile-title{
+    vertical-align: top;
+    width: 59%;
+    /* Inserindo a animação vinda do Keyframes*/
+    animation-name: title-home;
+    animation-duration: 10s;
+}
+
+.profile-title h1{
+    font-size: 58px;
+    margin-top: 250px;
+    text-transform: uppercase; /* Colocando as fontes em caixa alta */
+    font-weight: 400;
+    line-height: 58px;
+}
+
+.profile-title h2{
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: -30px;
+}
+
+                                            /* Page do currículo */
+
+.main{
+    padding-top: 80px;
+    padding-right: 60px;
+    padding-bottom: 80px;
+    padding-left: 60px;
+
+    animation-name: conteudo;
+    animation-duration: 2s;
+
+    /* -Ou declarar assim: shorthand property - padding: 80px 180px 80px 60px;*/
+}           
+
+.curriculo-photo{
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.main h1{
+    color: white;
+    font-weight: normal;
+}
+
+.main h2{
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 40px;
+}
+
+.main h3{
+    color: #0FA3B1;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.main p{
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.posicao{
+    list-style: none;
+    padding-left: 0;
+    color: grey;
+}
+
+.posicao a{
+    color: #0FA3B1;
+}
+
+.posicao li{
+    display: inline-block;
+}
+
+.redes-sociais-img{
+    width: 35px;
+    margin-right: 10px;
+}
+
+
+                                            /* Page do Portfólio */
+
+.mini-photos{
+    width: 320px;
+    height: 320px;
+    background-image: url("../img/projeto.png");
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: 1s;
+}
+
+    
+/* Efeito de opacidade no item */
+.box:hover{
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.box-descricao{
+    text-align: center;
+}
+
+.box-descricao h1{
+    color: #0FA3B1;
+}
+
+.back{
+    color: #0FA3B1;
+}
+
+.photos-trabalhos{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+                                    /* Criar animação para apresentação no index */
+@keyframes photo-home {
+    0% {opacity: 0; transform: translate(0px,20px)}
+    100% {opacity: 1; transform: translate(0px,0px)}
+}
+
+@keyframes title-home {
+    0% {opacity: 0; transform: translate(0px,-20px)}
+    100% {opacity: 1; transform: translate(0px,0px)}
+}
+
+@keyframes menu {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes conteudo{
+0% {opacity: 0; transform: translate(0px,20px)}
+100% {opacity: 1; transform: translate(0px,0px)}    
+}
+
+                                                /* Responsividade */ 
+
+@media (max-width: 1000px){
+    .menu li{
+        display: none;
+    }
+
+    .menu li.menu-icon{
+        display: inline-block;
+    }
+
+    .perfil div{
+        display: block;
+        height: auto;
+    }
+
+    .profile-photo{    
+        width: 100%;
+    }
+
+    .profile-photo img{
+        margin-top: 0;
+        max-width: 80%;
+    }
+
+    .profile-title{
+        width: 100%;
+    }
+
+    .profile-title h1{
+        text-align: center;
+        margin-top: 30px;
+        font-size: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .profile-title h2{
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .main{
+        padding: 10px 5% 40px 5%;
+    }
+
+    .main p{
+        text-align: left;
+        line-height: 30px;
+    }
+
+    .posicao{
+        font-size: 35px;
+    }
+
+    .menujs{
+        height: auto;
+    }
+
+    .menujs ul{
+        height: auto;
+    }
+
+    .menujs li{
+        display: block;
+        border-bottom: solid #0FA3B1;
+    }
+} 
